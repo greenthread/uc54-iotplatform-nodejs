@@ -4,12 +4,8 @@ via the Internet, a Cloud service might come to mind. This is an example
 of hooking up a PIR motion sensor on a Raspberry Pi with IBM IoT platform on 
 Bluemix. 
 
-This basic tutorial is composed of two parts:
-
-1) device scripts in python: reads data from a motion sensor on Raspberry Pi 
-and publishes motion events to IBM IoT platform.
-
-2) Web Application in Node.JS, Express.JS, and Angular.JS: subscribes to 
+This basic tutorial is composed of:
+1) Web Application in Node.JS, Express.JS, and Angular.JS: subscribes to 
 Raspberry Pi for motion sensor data, implements REST APIs and renders the sensor 
 data in the view. 
 
