@@ -1,13 +1,10 @@
-If you're like me and don't want to maintain a web server yourself but would 
-rather receive your sensor data from Raspberry Pis and control your sensors 
-via the Internet, a Cloud service might come to mind. This is an example 
-of hooking up a PIR motion sensor on a Raspberry Pi with IBM IoT platform on 
-Bluemix. 
+Following application would use IBM IoT platform service to receive your sensor data from Raspberry Pi 
+and notify user via the Internet. Example of hooking up a PIR motion sensor on a Raspberry Pi with IBM 
+IoT platform on Bluemix is avialable in the connectRaspberryPi2IoTPlatform.txt document.
 
 This basic tutorial is composed of:
-1) Web Application in Node.JS, Express.JS, and Angular.JS: subscribes to 
-Raspberry Pi for motion sensor data, implements REST APIs and renders the sensor 
-data in the view. 
+1) Web Application in Node.JS, Express.JS, and Angular.JS: subscribes to Raspberry Pi for motion sensor 
+data, implements REST APIs and renders the sensor data in the view. 
 
 For more details, check out the recipe below:
 
