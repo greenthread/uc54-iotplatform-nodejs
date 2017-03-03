@@ -1,0 +1,30 @@
+Connect a Raspberry Pi to IBM Watson IoT Platform
+
+1. Connect your Raspberry Pi to the internet
+2. Connect Watson IoT platform to Raspberry Pi
+- Download the installer on raspberry Pi: 
+curl -LO https://github.com/ibm-messaging/iot-raspberrypi/releases/download/1.0.2.1/iot_1.0-2_armhf.deb
+- Install the package on raspberry Pi: 
+sudo dpkg -i iot_1.0-2_armhf.deb
+- The iot process starts and publishes events to the IBM Watson IoT Platform.
+sudo service iot status
+sudo service iot stop
+sudo service iot start
+3. To visualize real-time device-data, get MAC address of your Raspberry Pi by running the following service command:
+service iot getdeviceid
+4. To register your Device In Watson IoT Platform, follow 
+https://console.ng.bluemix.net/docs/services/IoT/iotplatform_task.html#iotplatform_task
+5. Watson IoT Platform Registered connection
+- Stop the IoT service on raspberry Pi
+sudo service iot stop
+- Create a configuration file to add IoT platform information and save
+sudo nano /etc/iotsample-raspberrypi/device.cfg
+#Device configuration file
+org = yourOrganizationCode
+type = iotsample-raspberrypi
+id = <raspberryPi_macaddress>
+auth-method = token
+auth-token = yourAuthToken
+#End of Configuration file
+- Start the iot process
+sudo service iot start
